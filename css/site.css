@@ -35,8 +35,9 @@ body {
 .content {
     flex: 1 0 auto;
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    justify-content: center;
+    align-items: end;
+
 }
 
 .logo {
@@ -68,7 +69,7 @@ body {
 
 .navbar-brand,
 .nav-item>a {
-    color: var(--cf-light);
+    color: var(--cf-light) !important;
 }
 
 /* START: MEDIA QUERIES */
@@ -76,14 +77,23 @@ body {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     body {
-        background-size: cover;
-        background-position: top;
+        background-position: top center;
+        background-size: contain;
         background-image: url(/img/LandingPage_768.png);
     }
-
-    .content {
-        justify-content: center;
+    .titleText {
+        font-size: 3rem;
+        line-height: 1.8rem;
     }
+    
+    .subTitle {
+        font-size: 1.1rem;
+        letter-spacing: .09rem;
+        line-height: .7rem;
+    }
+.content {
+    padding-bottom: 5rem;
+}
 
 
 }
@@ -91,7 +101,14 @@ body {
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 body {
+    background-size: cover;
+    background-position: top;
     background-image: url(/img/LandingPage_992.png);
+}
+.content {
+    justify-content: start;
+    align-items: center;
+    padding-left: 3rem;
 }
 .titleText {
     font-size: 3rem;
